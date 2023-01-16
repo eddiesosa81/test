@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Enterprise</ion-title>
+    <ion-list>
+      <ion-item>
+        <ion-label>nombre:</ion-label>
+        <ion-input type="text" placeholder="Programador" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" placeholder="Name" name="name"  [(ngModel)]="empresa.name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Address</ion-label>
+      <ion-input type="text" placeholder="Address" name="address"  [(ngModel)]="empresa.address" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="text" placeholder="Phone" name="phone"  [(ngModel)]="empresa.phone" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button expand="full" type="submit"
+        [disabled]="formulario.invalid">Guardar</ion-button>
+    </ion-item>
+  </form>
+
+
+</ion-content>
